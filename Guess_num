@@ -1,0 +1,22 @@
+from random import randint
+
+start = 1
+end = 100
+value = randint(start, end)
+
+print(value)
+print("I'm thinking of a number between", start, "and", end)
+
+guess = None
+i = 0
+while guess != value:
+    text = input("Guess the number: ")
+    guess = int(text)
+
+    if guess < value:
+        print("your guessing number is Higher.")
+    elif guess > value:
+        print("Your guessing number is Lower.")
+    i+=1
+print("Congratulations! You guessed the right answer:", value)
+print(f"{i-1} Chances you get")
